@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shubhojit.io | Personal Branding & Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: 'rgba(var(--background), <alpha-value>)', 
+              surface: 'rgba(var(--surface), <alpha-value>)',
+              primary: '#06b6d4', // cyan-500
+              secondary: '#d946ef', // fuchsia-500
+              accent: '#10b981', // emerald-500
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              glow: {
+                '0%': { boxShadow: '0 0 5px rgba(6,182,212, 0.2)' },
+                '100%': { boxShadow: '0 0 20px rgba(6,182,212, 0.6)' },
+              }
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;600&display=swap');
+      
+      :root {
+        --background: 250, 250, 250; /* zinc-50 */
+        --surface: 255, 255, 255; /* white */
+        --text-main: 24, 24, 27; /* zinc-950 */
+        --text-muted: 82, 82, 91; /* zinc-600 */
+        --grid-color: 0, 0, 0;
+      }
+
+      .dark {
+        --background: 9, 9, 11; /* zinc-950 */
+        --surface: 24, 24, 27; /* zinc-900 */
+        --text-main: 244, 244, 245; /* zinc-100 */
+        --text-muted: 161, 161, 170; /* zinc-400 */
+        --grid-color: 255, 255, 255;
+      }
+
+      body {
+        background-color: rgb(var(--background));
+        color: rgb(var(--text-main));
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      /* Futuristic Background Grid */
+      .bg-grid {
+        background-size: 50px 50px;
+        background-image: linear-gradient(to right, rgba(var(--grid-color), 0.03) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(var(--grid-color), 0.03) 1px, transparent 1px);
+        mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgb(var(--background));
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgb(var(--text-muted));
+        opacity: 0.2;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #71717a;
+      }
+
+      .glass-panel {
+        background: rgba(var(--surface), 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(var(--text-main), 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+      }
+      .dark .glass-panel {
+        background: rgba(24, 24, 27, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+      
+      .text-glow {
+        text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?external=react,react-dom",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.0?external=react,react-dom",
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "date-fns": "https://esm.sh/date-fns@3.3.1",
+    "react-helmet-async": "https://esm.sh/react-helmet-async@2.0.4?external=react,react-dom"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
